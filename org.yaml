@@ -1,0 +1,9 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: Gavin
+  name: foxconn-gavin
+  description: 開發人員
+spec:
+  memberOf: []
