@@ -1,5 +1,57 @@
 ---
 apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  title: 信息辦公廳
+  name: government
+  description: 管理單位
+spec:
+  type: team
+  children: []
+  members: []
+  profile: 
+    displayName: 信息辦公廳
+    email: gavin.wq.wu@foxconn.com
+    picture: https://img2.baidu.com/it/u=158166868,3872699501&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  title: 交通局
+  name: ministry-of-transport
+  description: 管理單位
+spec:
+  type: team
+  parent: government
+  children: 
+    - group:default/foxconn
+  members: []
+  profile: 
+    displayName: 交通局
+    email: gavin.wq.wu@foxconn.com
+    picture: https://img1.baidu.com/it/u=1175173581,3896820610&fm=253&fmt=auto&app=138&f=JPEG?w=501&h=500
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  title: 鴻海富士康
+  name: foxconn
+  description: 開發單位
+spec:
+  type: team
+  parent: ministry-of-transport
+  children: []
+  members: 
+    - user:default/foxconn-gavin
+  profile: 
+    displayName: 鴻海富士康
+    email: gavin.wq.wu@foxconn.com
+    picture: https://img1.baidu.com/it/u=2047322526,4161969782&fm=253&fmt=auto&app=138&f=JPEG?w=583&h=359
+
+---
+apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   title: Gavin
@@ -7,3 +59,7 @@ metadata:
   description: 開發人員
 spec:
   memberOf: []
+  profile: 
+    displayName: 吳文強
+    email: gavin.wq.wu@foxconn.com
+    picture: https://icivetmedia.foxconn.com/group1/M00/71/9A/CoaWx2SnyWGEYoGwAAAAALKdTKo409.png
