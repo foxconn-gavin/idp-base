@@ -23,12 +23,15 @@ metadata:
 spec:
   type: team
   parent: government
+  admin:
+    - user:default/cain-sw-tsai
   children: 
     - group:default/foxconn
-  members: []
+  members: 
+    - user:default/cain-sw-tsai
   profile: 
     displayName: 交通局
-    email: gavin.wq.wu@foxconn.com
+    email: cain.sw.tsai@foxconn.com
 
 ---
 apiVersion: backstage.io/v1alpha1
@@ -42,12 +45,14 @@ spec:
   parent: ministry-of-transport
   admin: 
     - user:default/foxconn-gavin
+    - user:default/lzing
   children: []
   members: 
     - user:default/foxconn-gavin
+    - user:default/lzing
   profile: 
     displayName: 鴻海富士康
-    email: gavin.wq.wu@foxconn.com
+    email: zi-ying.liu@foxconn.com
 
 ---
 apiVersion: backstage.io/v1alpha1
@@ -61,3 +66,29 @@ spec:
   profile: 
     displayName: 吳文強
     email: gavin.wq.wu@foxconn.com
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: Zi-Ying Liu
+  name: lzing
+  description: 開發人員
+spec:
+  memberOf: []
+  profile: 
+    displayName: 劉梓穎
+    email: zi-ying.liu@foxconn.com
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: Cain Tsai
+  name: cain-sw-tsai
+  description: 開發人員
+spec:
+  memberOf: []
+  profile: 
+    displayName: 蔡憲維
+    email: cain.sw.tsai@foxconn.com
