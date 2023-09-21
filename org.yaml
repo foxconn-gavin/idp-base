@@ -102,4 +102,4 @@ metadata:
     交通行動服務（Mobility as a Service, MaaS）是改善疫後交通的重要解決方案。MaaS是一種新的出行服務理念，是指“將不同方式的出行服務（包括公交車、地鐵、網約車、共享單車、出租車、轮渡輪渡等），整合出按需出行的一體化出行服務。
   title: Mobility as a Service MaaS 交通行動服務領域
 spec:
-  owner: group:pbit
+  owner: group:foxconn
