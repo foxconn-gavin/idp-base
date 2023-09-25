@@ -51,6 +51,7 @@ spec:
     - user:default/foxconn-gavin
     - user:default/quttro
     - user:default/lzing
+    - user:default/cain-sw-tsai
   profile: 
     displayName: 鴻海富士康
     email: zi-ying.liu@foxconn.com
