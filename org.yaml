@@ -49,10 +49,24 @@ spec:
   children: []
   members: 
     - user:default/foxconn-gavin
+    - user:default/quttro
     - user:default/lzing
   profile: 
     displayName: 鴻海富士康
     email: zi-ying.liu@foxconn.com
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: Albert
+  name: quttro
+  description: 開發主管
+spec:
+  memberOf: []
+  profile: 
+    displayName: 齊敬仁
+    email: albert.cj.chi@foxconn.com
 
 ---
 apiVersion: backstage.io/v1alpha1
