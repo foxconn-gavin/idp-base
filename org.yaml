@@ -52,6 +52,9 @@ spec:
     - user:default/quttro
     - user:default/lzing
     - user:default/cain-sw-tsai
+    - user:default/Flyingts
+    - user:default/OdinHH
+    - user:default/Sallyshcehn
   profile: 
     displayName: 鴻海富士康
     email: zi-ying.liu@foxconn.com
@@ -107,6 +110,45 @@ spec:
   profile: 
     displayName: 蔡憲維
     email: cain.sw.tsai@foxconn.com
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: Flying
+  name: Flyingts
+  description: PM
+spec:
+  memberOf: []
+  profile: 
+    displayName: 黃天祥
+    email: flying.ts.huang@foxconn.com
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: Odin
+  name: OdinHH
+  description: PM
+spec:
+  memberOf: []
+  profile: 
+    displayName: 王泰元
+    email: odin.ty.wang@foxconn.com
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: Sally
+  name: Sallyshcehn
+  description: PM
+spec:
+  memberOf: []
+  profile: 
+    displayName: 陳萱翰
+    email: sally.sh.cehn@foxconn.com
 
 ---
 apiVersion: backstage.io/v1alpha1
