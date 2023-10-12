@@ -29,6 +29,7 @@ spec:
     - group:default/foxconn
   members: 
     - user:default/cain-sw-tsai
+    - user:default/frank-yd-luo
   profile: 
     displayName: 交通局
     email: cain.sw.tsai@foxconn.com
