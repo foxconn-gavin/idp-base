@@ -8,8 +8,7 @@ metadata:
 spec:
   type: team
   children: []
-  members: 
-    - user:default/frank-yd-luo
+  members: []
   profile: 
     displayName: 信息辦公廳
     email: gavin.wq.wu@foxconn.com
