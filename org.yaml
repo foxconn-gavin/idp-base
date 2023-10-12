@@ -55,6 +55,8 @@ spec:
     - user:default/Flyingts
     - user:default/OdinHH
     - user:default/Sallyshcehn
+    - user:default/evanliuqf
+    - user:default/frank-yd-luo
   profile: 
     displayName: 鴻海富士康
     email: zi-ying.liu@foxconn.com
@@ -149,7 +151,32 @@ spec:
   profile: 
     displayName: 陳萱翰
     email: sally.sh.cehn@foxconn.com
-
+    
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: frank
+  name: evanliuqf
+  description: QA
+spec:
+  memberOf: []
+  profile: 
+    displayName: 刘启福
+    email: 53880970@qq.com
+    
+    ---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: frank
+  name: frank-yd-luo
+  description: QA
+spec:
+  memberOf: []
+  profile: 
+    displayName: 罗义达
+    email: orc4@163.com
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Domain
