@@ -174,17 +174,7 @@ spec:
     email: sally.sh.cehn@foxconn.com
     
 ---
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  title: evanliu
-  name: evanliuqf
-  description: QA
-spec:
-  memberOf: []
-  profile: 
-    displayName: 刘启福
-    email: 53880970@qq.com
+
     
 ---
 apiVersion: backstage.io/v1alpha1
