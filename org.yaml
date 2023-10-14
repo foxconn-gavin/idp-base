@@ -208,3 +208,14 @@ metadata:
   title: Mobility as a Service MaaS 交通行動服務領域
 spec:
   owner: group:foxconn
+  
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: PaaS
+  description: |
+    PaaS是（Platform as a Service）的缩写，是指平台即服务。 把服务器平台作为一种服务提供的商业模式，通过网络进行程序提供的服务称之为SaaS(Software as a Service)，是云计算三种服务模式之一，而云计算时代相应的服务器平台或者开发环境作为服务进行提供就成为了PaaS。
+  title: Platform as a Service 平台即服务
+spec:
+  owner: group:QA-TESTING
