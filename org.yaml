@@ -78,6 +78,7 @@ spec:
   members: 
     - user:default/evanliuqf
     - user:default/frank-yd-luo
+    - user:default/hughdbhuang
   profile: 
     displayName: QA测试团队
     email: frnk.yd.luo@foxconn.com
@@ -198,6 +199,18 @@ spec:
   profile: 
     displayName: 罗义达
     email: orc4@163.com
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  title: Hugh
+  name: hughdbhuang
+  description: QA
+spec:
+  memberOf: []
+  profile: 
+    displayName: 黄德彬
+    email: hugh.db.huang@foxmail.com
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Domain
