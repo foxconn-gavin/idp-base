@@ -78,7 +78,6 @@ spec:
   members: 
     - user:default/evanliuqf
     - user:default/frank-yd-luo
-    - user:default/hughdbhuang
   profile: 
     displayName: QA测试团队
     email: frnk.yd.luo@foxconn.com
