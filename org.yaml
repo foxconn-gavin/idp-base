@@ -85,6 +85,24 @@ spec:
 
 ---
 apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  title: QA测试团队2
+  name: QA-TESTING-02
+  description: QA测试团队
+spec:
+  type: team
+  children: []
+  admin: 
+    - user:default/evanliuqf
+  members: 
+    - user:default/hughdbhuang
+  profile: 
+    displayName: QA测试团队
+    email: frnk.yd.luo@foxconn.com
+
+---
+apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   title: Albert
