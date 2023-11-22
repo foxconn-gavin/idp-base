@@ -68,7 +68,7 @@ kind: Group
 metadata:
   title: QA測試團隊
   name: QA-TESTING
-  description: QA测试团队
+  description: QA測試團隊
 spec:
   type: team
   children: []
