@@ -66,7 +66,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  title: QA测试团队
+  title: QA測試團隊
   name: QA-TESTING
   description: QA测试团队
 spec:
@@ -79,16 +79,16 @@ spec:
     - user:default/evanliuqf
     - user:default/frank-yd-luo
   profile: 
-    displayName: QA测试团队
+    displayName: QA測試團隊
     email: frnk.yd.luo@foxconn.com
 
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  title: QA测试团队2
+  title: QA測試團隊2
   name: QA-TESTING-02
-  description: QA测试团队
+  description: QA測試團隊
 spec:
   type: team
   children: []
@@ -97,7 +97,7 @@ spec:
   members: 
     - user:default/hughdbhuang
   profile: 
-    displayName: QA测试团队
+    displayName: QA測試團隊
     email: frnk.yd.luo@foxconn.com
 
 ---
