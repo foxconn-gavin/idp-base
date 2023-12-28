@@ -64,44 +64,6 @@ spec:
 
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  title: QA測試團隊
-  name: QA-TESTING
-  description: QA測試團隊
-spec:
-  type: team
-  children: []
-  admin: 
-    - user:default/evanliuqf
-    - user:default/frank-yd-luo
-  members: 
-    - user:default/evanliuqf
-    - user:default/frank-yd-luo
-  profile: 
-    displayName: QA測試團隊
-    email: frnk.yd.luo@foxconn.com
-
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  title: QA測試團隊2
-  name: QA-TESTING-02
-  description: QA測試團隊
-spec:
-  type: team
-  children: []
-  admin: 
-    - user:default/evanliuqf
-  members: 
-    - user:default/hughdbhuang
-  profile: 
-    displayName: QA測試團隊
-    email: frnk.yd.luo@foxconn.com
-
----
-apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   title: Albert
@@ -190,44 +152,6 @@ spec:
   profile: 
     displayName: 陳萱翰
     email: sally.sh.cehn@foxconn.com
-    
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  title: evanliu
-  name: evanliuqf
-  description: QA
-spec:
-  memberOf: []
-  profile: 
-    displayName: 劉啟福
-    email: 53880970@qq.com
-    
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  title: frank
-  name: frank-yd-luo
-  description: QA
-spec:
-  memberOf: []
-  profile: 
-    displayName: 罗义达
-    email: orc4@163.com
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  title: Hugh
-  name: hughdbhuang
-  description: QA
-spec:
-  memberOf: []
-  profile: 
-    displayName: 黄德彬
-    email: hugh.db.huang@foxmail.com
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Domain
@@ -239,13 +163,3 @@ metadata:
 spec:
   owner: group:foxconn
   
----
-apiVersion: backstage.io/v1alpha1
-kind: Domain
-metadata:
-  name: PaaS
-  description: |
-    PaaS是（Platform as a Service）的缩写，是指平台即服务。 把服务器平台作为一种服务提供的商业模式，通过网络进行程序提供的服务称之为SaaS(Software as a Service)，是云计算三种服务模式之一，而云计算时代相应的服务器平台或者开发环境作为服务进行提供就成为了PaaS。
-  title: Platform as a Service 平台即服务
-spec:
-  owner: group:QA-TESTING
