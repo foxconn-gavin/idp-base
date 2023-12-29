@@ -29,7 +29,6 @@ spec:
     - group:default/foxconn
   members: 
     - user:default/cain-sw-tsai
-    - user:default/frank-yd-luo
   profile: 
     displayName: 交通局
     email: cain.sw.tsai@foxconn.com
@@ -56,8 +55,6 @@ spec:
     - user:default/Flyingts
     - user:default/OdinHH
     - user:default/Sallyshcehn
-    - user:default/evanliuqf
-    - user:default/frank-yd-luo
   profile: 
     displayName: 鴻海富士康
     email: zi-ying.liu@foxconn.com
