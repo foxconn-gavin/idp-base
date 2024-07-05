@@ -202,3 +202,66 @@ spec:
           namespace: default
         spec:
           size: ${{ parameters.size }}
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: redis-idp-cache
+  title: "Redis idp-cache"
+  description: Redis created via the Promise
+  annotations:
+    backstage.io/kubernetes-label-selector: Redis=idp-cache
+  links:
+  - url: https://github.com/syntasso/kratix-marketplace
+    title: Support
+    icon: help
+spec:
+  type: service
+  lifecycle: production
+  owner: kratix-worker
+  dependsOn:
+    - component:default/redis
+  providesApis:
+    - redis-promise-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: postgres-city-gpt-idp-db
+  title: "PostgreSQL city-gpt-idp-db"
+  description: PostgreSQL created via the Promise
+  annotations:
+    backstage.io/kubernetes-label-selector: PostgreSQL=city-gpt-idp-db
+  links:
+  - url: https://github.com/syntasso/kratix-marketplace
+    title: Support
+    icon: help
+spec:
+  type: service
+  lifecycle: production
+  owner: kratix-worker
+  dependsOn:
+    - component:default/postgresql
+  providesApis:
+    - postgresql-promise-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: idp-search-es
+  title: "PostgreSQL city-gpt-idp-db"
+  description: EFK created via the Promise
+  annotations:
+    backstage.io/kubernetes-label-selector: EFK=idp-search
+  links:
+  - url: https://github.com/syntasso/kratix-marketplace
+    title: Support
+    icon: help
+spec:
+  type: service
+  lifecycle: production
+  owner: kratix-worker
+  dependsOn:
+    - component:default/elasticcloud
+  providesApis:
+    - elasticcloud-promise-api
