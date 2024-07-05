@@ -1,0 +1,204 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: postgres
+  title: "Postgres Promise"
+  description: "Create Postgres on-demand"
+  links:
+  - url: https://github.com/syntasso/kratix-marketplace
+    title: Support
+    icon: help
+  annotations:
+    backstage.io/kubernetes-id: postgres
+spec:
+  type: promise
+  lifecycle: production
+  owner: kratix-platform
+  dependsOn:
+    - component:default/kratix
+  providesApis:
+    - postgres-promise-api
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: postgres-promise-template
+  title: postgres
+  description: Postgres as a Service
+  tags:
+    - syntasso
+    - kratix
+spec:
+  type: service
+  lifecycle: experimental
+  owner: kratix-platform
+  parameters:
+    - title: Postgres as a Service
+      required:
+        - name
+        - teamId
+        - dbName
+        - env
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Name for Postgres instance
+          ui:autofocus: true
+        teamId:
+          title: TeamId
+          type: string
+          description: Your team id
+        env:
+          title: Env
+          type: string
+          description: Env for Postgres instance
+        dbName:
+          title: DatabaseName
+          type: string
+          description: DBName for Postgres instance
+  steps:
+  - id: k-apply
+    name: Create a Postgres
+    action: kubernetes:apply
+    input:
+      namespaced: true
+      manifest: |
+        apiVersion: marketplace.kratix.io/v1alpha1
+        kind: postgresql
+        metadata:
+          name: ${{ parameters.name }}
+          namespace: default
+        spec:
+          env: ${{ parameters.env }}
+          teamId: ${{ parameters.teamId }}
+          dbName: ${{ parameters.dbName }}
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: efk
+  title: "EFK(Elasticsearch+Filebeat+Kibana) Promise"
+  description: "Create EFK(Elasticsearch+Filebeat+Kibana) on-demand"
+  links:
+  - url: https://github.com/syntasso/kratix-marketplace
+    title: Support
+    icon: help
+  annotations:
+    backstage.io/kubernetes-id: efk
+spec:
+  type: promise
+  lifecycle: production
+  owner: kratix-platform
+  dependsOn:
+    - component:default/kratix
+  providesApis:
+    - efk-promise-api
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: efk-promise-template
+  title: efk
+  description: EFK as a Service
+  tags:
+    - syntasso
+    - kratix
+spec:
+  type: service
+  lifecycle: experimental
+  owner: kratix-platform
+  parameters:
+    - title: EFK as a Service
+      required:
+        - name
+        - env
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Name for EFK instance
+          ui:autofocus: true
+        env:
+          title: env
+          type: string
+          description: Env for EFK instance
+  steps:
+  - id: k-apply
+    name: Create a EFK
+    action: kubernetes:apply
+    input:
+      namespaced: true
+      manifest: |
+        apiVersion: marketplace.kratix.io/v1alpha1
+        kind: elasticcloud
+        metadata:
+          name: ${{ parameters.name }}
+          namespace: default
+        spec:
+          env: ${{ parameters.env }}
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: redis
+  title: "Redis Promise"
+  description: "Create Redis on-demand"
+  links:
+  - url: https://github.com/syntasso/kratix-marketplace
+    title: Support
+    icon: help
+  annotations:
+    backstage.io/kubernetes-id: redis
+spec:
+  type: promise
+  lifecycle: production
+  owner: kratix-platform
+  dependsOn:
+    - component:default/kratix
+  providesApis:
+    - redis-promise-api
+---
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: redis-promise-template
+  title: redis
+  description: Redis as a Service
+  tags:
+    - syntasso
+    - kratix
+spec:
+  type: service
+  lifecycle: experimental
+  owner: kratix-platform
+  parameters:
+    - title: Redis as a Service
+      required:
+        - name
+        - size
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Name for Redis instance
+          ui:autofocus: true
+        size:
+          title: Size
+          type: string
+          description: Size, small or large
+  steps:
+  - id: k-apply
+    name: Create a Redis
+    action: kubernetes:apply
+    input:
+      namespaced: true
+      manifest: |
+        apiVersion: marketplace.kratix.io/v1alpha1
+        kind: redis
+        metadata:
+          name: ${{ parameters.name }}
+          namespace: default
+        spec:
+          size: ${{ parameters.size }}
