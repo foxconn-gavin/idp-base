@@ -1,4 +1,4 @@
----
+K---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -249,7 +249,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: idp-search-es
-  title: "PostgreSQL city-gpt-idp-db"
+  title: "EFK idp-search"
   description: EFK created via the Promise
   annotations:
     backstage.io/kubernetes-label-selector: EFK=idp-search
